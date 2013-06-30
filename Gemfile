@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 group :development, :test do
     gem 'sqlite3'
     gem 'rspec-rails'
-    gem 'capybara', '1.1.2'
+    gem 'guard-rspec'
 end
 
 
@@ -28,9 +28,14 @@ gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
 
-#group :test do
-#    gem 'capybara'
-#end
+group :test do
+   gem 'capybara', '1.1.2'
+   gem 'rb-inotify', '0.9'
+   gem 'libnotify', '0.5.9'
+   gem 'guard-spork', '1.2.0'
+   gem 'childprocess', '0.3.6'
+   gem 'spork', '0.9.2'
+end
 
 group :production do
     gem 'pg'
